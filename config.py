@@ -21,8 +21,8 @@ mirai_http_api_config = {
     "host": "localhost",
     "port": 10081,
     "verifyKey": "yirimirai",
-    "qq": 1050858466
-}
+    "qq": 
+} #'qq'处填写机器人的qq
 
 # [必需] OpenAI的配置，api_key: OpenAI的API Key
 # 1.若只有一个api-key，请直接修改以下内容中的"openai_api_key"为你的api-key
@@ -32,29 +32,29 @@ mirai_http_api_config = {
 
 openai_config = {
     "api_key": {
-        "default": "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",
+        "default": "",
         "default1": "",
         },
     "http_proxy": None,
     "reverse_proxy": None    
-}
+} #api_key请转至api_keys.txt文件寻找，均为本人openai账户创建的GPT3.5-turbo
 
 # ---------------------------------------------响应参数---------------------------------------------
 # user_name: 管理员(主人)的名字
 # bot_name: 机器人的名字
-user_name = '神宫七道'
-bot_name = '二中树洞三号'
+user_name = ''
+bot_name = ''
 
 # 每个会话的预设信息，影响所有会话，无视指令重置，这是你机器人的人格
 # 使用 !reset 第二人格 ，来使用指定的情景预设重置会话，如果不指定则为default默认的
 default_prompt = {
-   "default": "您好，这里是二中八号树洞喵。请问有什么想要聊的不？",
+   "default": "",
    "第二人格": "我想让你充当 Linux 终端。我将输入命令，您将回复终端应显示的内容。",
    "第三人格": "我想让你充当英英词典，对于给出的英文单词，你要给出其中文意思以及英文解释，并且给出一个例句，此外不要有其他反馈。",
- }
+ } #建议第一个人格（"default"）创建个人学校的树洞信息，如有超过3个人格设置请按字典格式添加
 
 # [必需] 管理员QQ号，用于接收报错等通知及执行管理员级别指令，以下改成你的QQ号，现在支持多个管理员，可以使用list形式设置，例如：admin_qq = [12345678, 87654321]
-admin_qq = 2947678601
+admin_qq = 
 
 # 群内响应规则，符合此消息的群内消息即使不包含at机器人也会响应
 # 支持消息前缀匹配及正则表达式匹配，注意：由消息前缀(prefix)匹配的消息中将会删除此前缀且具有高优先级，而正则表达式(regexp)匹配的消息不会删除匹配的部分 
