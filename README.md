@@ -1,8 +1,4 @@
-- 👋 Hi, I’m @Remiliatri
-- 👀 I’m interested in AI
-- 🌱 I’m currently learning Vim
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+-最新树洞参数值参考config，仅供初中级树洞QCHAT使用
 
 <!---
 Remiliatri/Remiliatri is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
