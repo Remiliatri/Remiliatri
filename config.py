@@ -22,7 +22,7 @@ mirai_http_api_config = {
     "port": 10081,
     "verifyKey": "yirimirai",
     "qq": 
-} #'qq'处填写机器人的qq
+} #这里填需要挂bot的qq，最好是自己的小号
 
 # [必需] OpenAI的配置，api_key: OpenAI的API Key
 # 1.若只有一个api-key，请直接修改以下内容中的"openai_api_key"为你的api-key
@@ -32,12 +32,11 @@ mirai_http_api_config = {
 
 openai_config = {
     "api_key": {
-        "default": "",
-        "default1": "",
+        "default": "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",
         },
     "http_proxy": None,
     "reverse_proxy": None    
-} #api_key请转至api_keys.txt文件寻找，均为本人openai账户创建的GPT3.5-turbo
+}
 
 # ---------------------------------------------响应参数---------------------------------------------
 # user_name: 管理员(主人)的名字
@@ -51,7 +50,7 @@ default_prompt = {
    "default": "",
    "第二人格": "我想让你充当 Linux 终端。我将输入命令，您将回复终端应显示的内容。",
    "第三人格": "我想让你充当英英词典，对于给出的英文单词，你要给出其中文意思以及英文解释，并且给出一个例句，此外不要有其他反馈。",
- } #建议第一个人格（"default"）创建个人学校的树洞信息，如有超过3个人格设置请按字典格式添加
+ } #第一人格建议填写树洞相关的人格设定，如有需要可以添加更多人格（请勿泄露！reset命令给非管理员）
 
 # [必需] 管理员QQ号，用于接收报错等通知及执行管理员级别指令，以下改成你的QQ号，现在支持多个管理员，可以使用list形式设置，例如：admin_qq = [12345678, 87654321]
 admin_qq = 
@@ -121,13 +120,13 @@ include_image_description = True
 quote_origin = False
 
 # 消息处理的超时时间，单位为秒
-process_message_timeout = 180
+process_message_timeout = 60
 
 # 消息处理超时重试次数
 retry_times = 1
 
 # 回复消息时是否显示[GPT]前缀
-show_prefix = False
+show_prefix = True
 
 # [暂未实现] 群内会话是否启用多对象名称
 # 若不启用，群内会话的prompt只使用user_name和bot_name
@@ -144,10 +143,10 @@ sys_pool_num = 8
 # 执行管理员请求和指令的线程池并行线程数量，一般和管理员数量相等
 admin_pool_num = 2
 # 执行用户请求和指令的线程池并行线程数量，如需要更高的并发，可以增大该值
-user_pool_num = 6
+user_pool_num = 10
 
 # 每个会话的过期时间，单位为秒，原默认值20分钟，即 1200 ,注意这里的数字只能是整数
-session_expire_time = 600000
+session_expire_time = 1200
 
 # 会话限速
 # 单会话内每分钟可进行的对话次数，若不需要限速，可以设置为一个很大的值
@@ -203,7 +202,7 @@ inappropriate_message_tips = "[百度云]请珍惜机器人，当前返回内容
 
 # 单个api-key的费用警告阈值，当使用此api-key进行请求所消耗的费用估算达到此阈值时，会在控制台输出警告并通知管理员
 # 若之后还有未使用超过此值的api-key，则会切换到新的api-key进行请求，单位：美元
-api_key_fee_threshold = 18.0
+api_key_fee_threshold = 1.0
 
 # 启动时是否发送赞赏码，这将仅当使用量已经超过2048字时发送
 encourage_sponsor_at_start = False
@@ -223,7 +222,7 @@ upgrade_dependencies = False
 # 是否上报统计信息
 # 用于统计机器人的使用情况，不会收集任何用户信息
 # 仅上报时间、字数使用量、绘图使用量，其他信息不会上报
-report_usage = False
+report_usage = True
 
 # 日志级别
 logging_level = logging.INFO
