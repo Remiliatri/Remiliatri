@@ -1,4 +1,4 @@
-最新树洞参数值参考config，仅供初中级树洞QCHAT使用
+最新树洞参数值参考config，仅供树洞QCHAT使用
 
 内源文件请找RockChinQ大佬的Release,对应路径：github.com/RockChinQ/QChatGPT
 
